@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atividade 03</title>
+  <link rel="stylesheet" href="./css/styles.css?v=3" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Atividade 03</h1>
+      <nav class="tabs" id="tabs">
+        <button data-target="media" class="active">1) Média</button>
+        <button data-target="idade">2) Idade em 2024</button>
+        <button data-target="fatorial">3) Fatorial</button>
+        <button data-target="parimpar">4) Par ou Ímpar</button>
+        <button data-target="tabuada">5) Tabuada</button>
+      </nav>
+    </header>
+
+    <!-- 1) Média -->
+    <section id="media" class="card">
+      <h2 class="card-title">1) Média do aluno</h2>
+      <form id="form-media">
+        <div class="row cols-2">
+          <div>
+            <label for="aluno">Nome do aluno</label>
+            <input id="aluno" required>
+          </div>
+          <div>
+            <label for="disciplina">Disciplina</label>
+            <input id="disciplina" required>
+          </div>
+        </div>
+        <div class="row cols-2">
+          <div>
+            <label for="n1">Nota 1</label>
+            <input id="n1" type="number" step="0.01" min="0" max="10" required>
+          </div>
+          <div>
+            <label for="n2">Nota 2</label>
+            <input id="n2" type="number" step="0.01" min="0" max="10" required>
+          </div>
+        </div>
+        <div>
+          <button class="btn primary" type="submit">Calcular</button>
+          <button class="btn secondary" type="reset">Limpar</button>
+        </div>
+      </form>
+      <div id="card-media" class="result-card" aria-live="polite">
+        <p class="result-title">Resultado</p>
+        <div class="result-body"></div>
+      </div>
+    </section>
+
+    <!-- 2) Idade -->
+    <section id="idade" class="card hide">
+      <h2 class="card-title">2) Idade em 2024</h2>
+      <form id="form-idade">
+        <div class="row cols-2">
+          <div>
+            <label for="ano-nasc">Ano de nascimento</label>
+            <input id="ano-nasc" type="number" min="1900" max="2024" required>
+          </div>
+        </div>
+        <div>
+          <button class="btn primary" type="submit">Calcular</button>
+          <button class="btn secondary" type="reset">Limpar</button>
+        </div>
+      </form>
+      <div id="card-idade" class="result-card" aria-live="polite">
+        <p class="result-title">Resultado</p>
+        <div class="result-body"></div>
+      </div>
+    </section>
+
+    <!-- 3) Fatorial -->
+    <section id="fatorial" class="card hide">
+      <h2 class="card-title">3) Fatorial</h2>
+      <form id="form-fatorial">
+        <div class="row cols-2">
+          <div>
+            <label for="num-fat">Número (≥ 0, inteiro)</label>
+            <input id="num-fat" type="number" min="0" step="1" required>
+          </div>
+        </div>
+        <div>
+          <button class="btn primary" type="submit">Calcular</button>
+          <button class="btn secondary" type="reset">Limpar</button>
+        </div>
+      </form>
+      <div id="card-fatorial" class="result-card" aria-live="polite">
+        <p class="result-title">Resultado</p>
+        <div class="result-body"></div>
+      </div>
+    </section>
+
+    <!-- 4) Par/Ímpar -->
+    <section id="parimpar" class="card hide">
+      <h2 class="card-title">4) Par ou Ímpar</h2>
+      <form id="form-parimpar">
+        <div class="row cols-2">
+          <div>
+            <label for="num-par">Número (inteiro)</label>
+            <input id="num-par" type="number" step="1" required>
+          </div>
+        </div>
+        <div>
+          <button class="btn primary" type="submit">Verificar</button>
+          <button class="btn secondary" type="reset">Limpar</button>
+        </div>
+      </form>
+      <div id="card-parimpar" class="result-card" aria-live="polite">
+        <p class="result-title">Resultado</p>
+        <div class="result-body"></div>
+      </div>
+    </section>
+
+    <!-- 5) Tabuada -->
+    <section id="tabuada" class="card hide">
+      <h2 class="card-title">5) Tabuada</h2>
+      <form id="form-tabuada">
+        <div class="row cols-2">
+          <div>
+            <label for="num-tab">Número</label>
+            <input id="num-tab" type="number" step="1" required>
+          </div>
+        </div>
+        <div>
+          <button class="btn primary" type="submit">Gerar</button>
+          <button class="btn secondary" type="reset">Limpar</button>
+        </div>
+      </form>
+      <div id="card-tabuada" class="result-card" aria-live="polite">
+        <p class="result-title">Resultado</p>
+        <div class="result-body"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./js/app.js?v=3"></script>
+</body>
+</html>
